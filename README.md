@@ -28,3 +28,10 @@ Welcome to the TopChill API which you can find on: https://top-chill.herokuapp.c
 
 ## More to come as we work throughout the week
 
+- Added a set username and password so we don't have to register every so often.
+
+-Data shape:
+{
+    "username": "NEW",
+    "password": "HAPPY"
+}
