@@ -7,7 +7,7 @@ Welcome to the TopChill API which you can find on: https://top-chill.herokuapp.c
 ## Auth 
 
 - Register 
-- https://top-chill.herokuapp.com/auth/register
+- https://top-chill.herokuapp.com/api/auth/register
 - Data shape: 
     {
         "username": "ADD USERNAME OF YOUR CHOOSING",
@@ -16,7 +16,7 @@ Welcome to the TopChill API which you can find on: https://top-chill.herokuapp.c
     }
 
 - Login
-- https://top-chill.herokuapp.com/auth/login
+- https://top-chill.herokuapp.com/api/auth/login
 - Data shape: 
     {
         "username": "username",
