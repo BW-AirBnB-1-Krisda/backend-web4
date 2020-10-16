@@ -32,6 +32,6 @@ Welcome to the TopChill API which you can find on: https://top-chill.herokuapp.c
 
 -Data shape:
 {
-    "username": "NEW",
-    "password": "HAPPY"
+    "username": "LambdaSchool",
+    "password": "password"
 }
