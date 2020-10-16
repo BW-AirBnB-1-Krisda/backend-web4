@@ -36,6 +36,6 @@ server.use(express.json())
 server.use(session(sessionConfig));
 
 server.use('/api/users', userRouter);
-server.use('/api/auth', authRouter)
+server.use('/api/auth', authRouter);
 
 module.exports = server;
