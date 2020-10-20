@@ -34,7 +34,7 @@ Welcome to the TopChill API which you can find on: https://top-chill.herokuapp.c
 Data Shape: {
         "city": "Dummy" STRING,
         "room_type": "Dummy" STRING,
-        "security_deposit": Dummy INTEGER,
+        "security_deposit": Dummy FLOAT,
         "guests_included": Dummy INTEGER,
         "min_nights": Dummy INTEGER
 }
@@ -46,7 +46,7 @@ Data Shape: {
 Data Shape: {
         "city": STRING,
         "room_type": STRING,
-        "security_deposit": INTEGER,
+        "security_deposit": FLOAT,
         "guests_included": INTEGER,
         "min_nights": INTEGER
 }

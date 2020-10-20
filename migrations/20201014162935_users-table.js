@@ -18,7 +18,7 @@ exports.up = function(knex) {
            .notNullable();
         tbl.string('room_type', 128)
            .notNullable();
-        tbl.integer('security_deposit')
+        tbl.float('security_deposit')
             .notNullable();
         tbl.integer('guests_included')
            .notNullable();
