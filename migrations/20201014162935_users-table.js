@@ -12,9 +12,30 @@ exports.up = function(knex) {
             .unique()
             .notNullable();
     })
+    .createTable('listings', tbl => {
+        tbl.increments('id');
+        tbl.string('city', 128)
+           .notNullable();
+        tbl.string('room_type', 128)
+           .notNullable();
+        tbl.integer('security_deposit')
+            .notNullable();
+        tbl.integer('guests_included')
+           .notNullable();
+        tbl.integer('min_nights')
+           .notNullable();
+        tbl.integer('user_id')
+           .unsigned()
+           .notNullable()
+           .references('id')
+           .inTable('users')
+           .onUpdate('CASCADE')
+           .onDelete('CASCADE');
+    })
 };
 
 exports.down = function(knex) {
     return knex.schema
-        .dropTableIfExists('users');
+        .dropTableIfExists('users')
+        .dropTableIfExists('listings');
 };
