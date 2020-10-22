@@ -24,6 +24,8 @@ exports.up = function(knex) {
            .notNullable();
         tbl.integer('min_nights')
            .notNullable();
+        tbl.integer('price')
+            .notNullable();
         tbl.integer('user_id')
            .unsigned()
            .notNullable()

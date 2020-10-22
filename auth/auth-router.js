@@ -4,6 +4,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const secrets = require('../secrets/secrets.js');
 
+
 router.post('/register', async (req, res) => {
     let user = req.body;
     const hash = bcrypt.hashSync(user.password, 10);
@@ -20,7 +21,7 @@ router.post('/register', async (req, res) => {
 })
 
 router.post('/login', async (req, res) => {
-    let {username, password, id} = req.body;
+    let {username, password} = req.body;
 
     try {
         const user = await Users.findBy({username}).first();

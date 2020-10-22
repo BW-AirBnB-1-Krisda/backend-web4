@@ -2,10 +2,20 @@ const router = require('express').Router();
 const Listings = require('./listings-model.js');
 // After clicking listings, direct to user listings with the given ID 
 
+router.get('/', (req, res) => {
+    Listings.findAllListings()
+        .then(listings => {
+            res.status(200).json(listings);
+        })
+        .catch(err => {
+            res.status(500).json({message: 'Could not find ALL listings.', error: err})
+        })
+})
+
 router.get('/user/:id', (req, res) => {
     const {id} = req.params;
 
-    Listings.findListings(id)
+    Listings.findListingsForUser(id)
         .then(listings => {
             res.status(200).json(listings);
         })

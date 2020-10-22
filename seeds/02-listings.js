@@ -8,6 +8,7 @@ exports.seed = function(knex) {
       security_deposit: 1200,
       guests_included: 2,
       min_nights: 3,
+      price: 1000,
       user_id: 1
     }
   ])
