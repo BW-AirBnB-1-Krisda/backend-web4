@@ -6,7 +6,8 @@ module.exports = {
     find,
     findBy,
     findById,
-    findListings,
+    findAllListings,
+    findListingsForUser,
     findListingById,
     update,
     remove
@@ -39,7 +40,10 @@ function findById(id){
         .first();
 }
 
-function findListings(id){
+function findAllListings(){
+    return db('listings')
+}
+function findListingsForUser(id){
     return db('listings as l')
         .join('users as u', 'l.user_id','u.id')
         .select('u.username', 'l.city', 'l.room_type', 'l.security_deposit', 'l.guests_included', 'l.id', 'l.user_id')
@@ -58,7 +62,7 @@ function update(changes, id){
         .where({id})
         .update(changes)
         .then(count => {
-            return findById(id);
+            return findListingById(id);
         })
 }
 
