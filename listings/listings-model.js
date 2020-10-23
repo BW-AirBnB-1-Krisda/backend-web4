@@ -46,7 +46,7 @@ function findAllListings(){
 function findListingsForUser(id){
     return db('listings as l')
         .join('users as u', 'l.user_id','u.id')
-        .select('u.username', 'l.city', 'l.room_type', 'l.security_deposit', 'l.guests_included', 'l.id', 'l.user_id')
+        .select('u.username', 'l.city', 'l.room_type', 'l.security_deposit', 'l.guests_included', 'l.min_nights', 'l.price', 'l.id', 'l.user_id')
         .orderBy('u.id')
         .where({user_id: id})
 }
